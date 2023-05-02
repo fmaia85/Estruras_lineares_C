@@ -10,7 +10,8 @@ int main(int argc, char const *argv[])
     leiAddLast(lista, 35);
     leiAddLast(lista, 55);
 
-    leiAddPos(0, 0, 0);
+    leiAddPos(lista, 0, 15);
+    leiAddPos(lista, 2, 30);
 
     leiDelPos(0, 0);
     leiGetPos(0, 0);

@@ -26,7 +26,15 @@ void leiAddLast(lista_enc_int* lista, int valor){
 }
 
 void leiAddPos(lista_enc_int* lista, int pos, int valor){
-    printf("Chamou o metodo leiAddPos.\n");
+    if(pos <= 0){
+        lista_enc_int* node = leiStart(lista->valor);
+        node->prox = lista->prox;
+        lista->prox = node;
+        lista->valor = valor;      
+    } else {
+        leiAddPos(lista->prox, pos-1, valor);
+    }
+
 }
 
 
