@@ -18,7 +18,11 @@ void leiDestruct(lista_enc_int* lista){
 }
 
 void leiAddLast(lista_enc_int* lista, int valor){
-    printf("Chamou o metodo leiAddLast.\n");
+    if(lista->prox != 0){
+        leiAddLast(lista->prox, valor);
+    } else {
+        lista->prox = leiStart(valor);
+    }
 }
 
 void leiAddPos(lista_enc_int* lista, int pos, int valor){

@@ -7,7 +7,11 @@ int main(int argc, char const *argv[])
 {
     lista_enc_int* lista = leiStart(25);
     
-    leiAddLast(0, 0);
+    leiAddLast(lista, 35);
+    leiAddLast(lista, 55);
+
+    leiAddPos(0, 0, 0);
+
     leiDelPos(0, 0);
     leiGetPos(0, 0);
     leiGetTam(0);
