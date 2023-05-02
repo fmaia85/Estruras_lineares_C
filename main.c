@@ -5,12 +5,14 @@
 
 int main(int argc, char const *argv[])
 {
-    leiStart(0);
-    leiDestruct(0);
+    lista_enc_int* lista = leiStart(25);
+    
     leiAddLast(0, 0);
     leiDelPos(0, 0);
     leiGetPos(0, 0);
     leiGetTam(0);
+
+    leiDestruct(lista);
 
     printf("\n\n\n");
     return 0;

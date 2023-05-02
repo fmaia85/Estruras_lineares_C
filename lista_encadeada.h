@@ -14,6 +14,8 @@ void leiDestruct(lista_enc_int* lista);
 
 void leiAddLast(lista_enc_int* lista, int valor);
 
+void leiAddPos(lista_enc_int* lista, int pos, int valor);
+
 int leiDelPos(lista_enc_int* lista, int pos);
 
 int leiGetPos(lista_enc_int* lista, int pos);
