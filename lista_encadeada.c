@@ -37,7 +37,6 @@ void leiAddPos(lista_enc_int* lista, int pos, int valor){
 
 }
 
-
 int leiDelPos(lista_enc_int* lista, int pos){
     printf("Chamou o metodo leiDelPos.\n");
     return 0;
@@ -49,7 +48,9 @@ int leiGetPos(lista_enc_int* lista, int pos){
 }
 
 int leiGetTam(lista_enc_int* lista){
-    printf("Chamou o metodo leiGetTam.\n");
-    return 0;
+    if(lista->prox == 0){
+        return 1;
+    }
+    return leiGetTam(lista->prox) + 1;
 }
 

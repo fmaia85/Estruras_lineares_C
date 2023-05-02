@@ -15,7 +15,8 @@ int main(int argc, char const *argv[])
 
     leiDelPos(0, 0);
     leiGetPos(0, 0);
-    leiGetTam(0);
+    int tam = leiGetTam(lista);
+    printf("Tamanho da lista: %d.\n", tam);
 
     leiDestruct(lista);
 
