@@ -5,7 +5,7 @@
  * \brief Representa uma lista encadeada de valores inteiros.
  *
  * Esta estrutura representa listas encadeadas do tipo inteiro.
- * Essa mesma estrutra pode ser entendida como os nós da lista
+ * Essa mesma estrutura pode ser entendida como os nós da lista
  * ou a própria lista. 
  * Aplicando os conceitos de recursividade, cada nó da lista
  * pode ser entendido como o início de uma nova lista.
@@ -18,7 +18,7 @@
  * de elementos que contém. Porém, nas implementações de suas
  * funções de manipulação é possível determinar um valor nulo (0)
  * para indicar quando não há um próximo nó. Isso permite
- * perceber quando podemos chegamos ao último nó da lista. 
+ * perceber quando podemos chegar ao último nó da lista. 
  */
 struct node_enc_int{
     int valor;
@@ -32,7 +32,7 @@ typedef struct node_enc_int lista_enc_int;
  *
  * Inicializa uma nova lista encadeada simples que armazena
  * valores do tipo int.
- * O primeiro elemento da lista receberá o valore informado
+ * O primeiro elemento da lista receberá o valor informado
  * no parâmetro da função.
  *
  * \param cabeca Um valor inteiro que será atribuido ao
@@ -82,7 +82,7 @@ void leiAddPos(lista_enc_int* lista, int pos, int valor);
 /**
  * \brief Deleta um elemento em uma posição da lista.
  *
- * Percorre toda a lista e, ao chegar na posição determinda,
+ * Percorre toda a lista e, ao chegar na posição determinada,
  * deleta o elemento nesta posição.
  * Esta função reduz o tamanho total da lista e por
  * consequência altera o índice de todos os elementos
@@ -101,8 +101,8 @@ int leiDelPos(lista_enc_int* lista, int pos);
 /**
  * \brief Consulta um elemento em uma posição da lista.
  *
- * Percorre toda a lista e, ao chegar na posição determinda,
- * consulta o valore do elemento nesta posição.
+ * Percorre toda a lista e, ao chegar na posição determinada,
+ * consulta o valor do elemento nesta posição.
  *
  * \param lista a lista que será consultada.
  * \param pos posição específica onde será consultado.
@@ -114,7 +114,7 @@ int leiGetPos(lista_enc_int* lista, int pos);
 /**
  * \brief Consulta o tamanho total da lista.
  *
- * Percorre toda a lista contando seus elemento.
+ * Percorre toda a lista contando seus elementos.
  * Ao chegar no último elemento, retorna a quantidade
  * total de elementos encontrados.
  *
