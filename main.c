@@ -2,9 +2,9 @@
 #include<stdlib.h>
 #include<string.h>
 #include"lista_encadeada.h"
+#include"pilha.h"
 
-int main(int argc, char const *argv[])
-{   
+void leiTest(){
     /*Criação de uma nova lista:*/
     lista_enc_int* lista = leiStart(25);
     
@@ -29,9 +29,36 @@ int main(int argc, char const *argv[])
         int v = leiGetPos(lista, i);
         printf("[%d] %d; ", i, v);
     }
+    printf("\n");
 
     /*Destruindo complemente a lista:*/
     leiDestruct(lista);
+    printf("Fim do leiTest\n");
+}
+
+void siTest(){
+    stack_int* pilha = siStart();
+
+    siPush(pilha, 51);
+    siPush(pilha, 22);
+    siPush(pilha, 44);
+    siPush(pilha, 13);
+
+    printf("POP: %d\n", siPop(pilha));
+    printf("POP: %d\n", siPop(pilha));
+    printf("POP: %d\n", siPop(pilha));
+
+    siDestruct(pilha);
+
+    printf("Fim do siTest\n");
+
+}
+
+
+int main(int argc, char const *argv[])
+{   
+    leiTest();
+    siTest();
 
     printf("\n\n\n");
     return 0;
