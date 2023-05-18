@@ -34,20 +34,20 @@ void leiAddPos(lista_enc_int* lista, int pos, int valor){
     }
 }
 
-int leiDelPos(lista_enc_int* lista, int pos){
-    if (pos <= 0){
-        lista_enc_int* target = lista->prox;
-        int valor = lista->valor;
-        lista->valor = target->valor;
-        lista->prox = target->prox;
-        free(target);
-        return valor;
+lista_enc_int* leiDelPos(lista_enc_int* lista, int pos){
+    if (pos == 0){
+        lista_enc_int* prox = lista->prox;
+        free(lista);
+        return prox;
     }
-    return leiDelPos(lista->prox, pos-1);
+    if(lista->prox){
+        lista->prox = leiDelPos(lista->prox, pos-1);
+    }
+    return lista;
 }
 
 int leiGetPos(lista_enc_int* lista, int pos){
-    if (pos <= 0){
+    if (pos == 0){
         int valor = lista->valor;
         return valor;
     }

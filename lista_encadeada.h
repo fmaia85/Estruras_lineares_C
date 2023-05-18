@@ -93,9 +93,10 @@ void leiAddPos(lista_enc_int* lista, int pos, int valor);
  * \param lista a lista que será modificada.
  * \param pos posição específica onde será removido.
  * 
- * \return retorna o valor que estava no elemento removido.
+ * \return retorna um ponteiro para a nova lista, agora com 
+ *          o elemento removido.
  */
-int leiDelPos(lista_enc_int* lista, int pos);
+lista_enc_int* leiDelPos(lista_enc_int* lista, int pos);
 
 
 /**

@@ -17,8 +17,8 @@ int main(int argc, char const *argv[])
     leiAddPos(lista, 2, 35);
 
     /*Removendo elementos de posições específicas:*/
-    leiDelPos(lista, 2);
-    leiDelPos(lista, 0);
+    lista = leiDelPos(lista, 2);
+    lista = leiDelPos(lista, 1);
 
     /*Consultando o tamanho atual da lista:*/
     int tam = leiGetTam(lista);
