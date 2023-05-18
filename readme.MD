@@ -4,6 +4,7 @@ Repositório criado para armazenar exemplos de estruturas de dados lineares em C
 
 Implementações de:
 1. Lista Encadeada.
+2. Pilha.
 
 As implementações funcionam apenas para valores de tipo inteiro.
 
@@ -28,7 +29,19 @@ Nesse projeto estão implementadas as funções:
 
 * leiGetTam: calcula o tamanho total da lista.
 
+## Pilha
 
+Nesse projeto estão implementadas as funções:
+
+* siStart: inicializa uma nova pilha. Retorna um ponteiro para a pilha inicializada.
+
+* siDestruct: destroi completamente a pilha e todos os seus elementos;
+
+* siPush: adiciona um novo elemento (valor) na cabeça da pilha;
+
+* siPop: remove o elemente presente na cabeça da pilha e retorna seu valor;
+
+* siGetTam: calcula o tamanho total da pilha.
 
 ## Compilação
 
