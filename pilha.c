@@ -16,7 +16,7 @@ void siDestruct(stack_int* pilha){
 }
 
 void siPush(stack_int* pilha, int valor){
-    struct node_stack_int* nn = (struct node_stack_int*)malloc(sizeof(struct node_stack_int*));
+    node_stack_int* nn = (node_stack_int*)malloc(sizeof(node_stack_int*));
     nn->valor = valor;
     nn->prox = pilha->head;
     pilha->head = nn;

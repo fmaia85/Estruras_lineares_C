@@ -16,9 +16,11 @@ struct node_stack_int{
     int valor;
     struct node_stack_int* prox;
 };
+typedef struct node_stack_int node_stack_int;
+
 struct stack_int{
     int tam;
-    struct node_stack_int* head;
+    node_stack_int* head;
 };
 typedef struct stack_int stack_int;
 
