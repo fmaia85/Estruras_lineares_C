@@ -44,7 +44,7 @@ Nesse projeto estão implementadas as funções:
 
 * siGetTam: calcula o tamanho total da pilha.
 
-## File
+## Fila
 
 Nesse projeto estão implementadas as funções:
 
