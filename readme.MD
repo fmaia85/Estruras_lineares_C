@@ -5,6 +5,7 @@ Repositório criado para armazenar exemplos de estruturas de dados lineares em C
 Implementações de:
 1. Lista Encadeada.
 2. Pilha.
+3. Fila.
 
 As implementações funcionam apenas para valores de tipo inteiro.
 
@@ -39,9 +40,24 @@ Nesse projeto estão implementadas as funções:
 
 * siPush: adiciona um novo elemento (valor) na cabeça da pilha;
 
-* siPop: remove o elemente presente na cabeça da pilha e retorna seu valor;
+* siPop: remove o elemento presente na cabeça da pilha e retorna seu valor;
 
 * siGetTam: calcula o tamanho total da pilha.
+
+## File
+
+Nesse projeto estão implementadas as funções:
+
+* qiStart: inicializa uma nova fila. Retorna um ponteiro para a fila inicializada.
+
+* qiDestruct: destroi completamente a fila e todos os seus elementos;
+
+* qiEnqueue: adiciona um novo elemento (valor) no final (rear) da fila;
+
+* qiDequeue: remove o elementeo presente no início (front) da fila e retorna seu valor;
+
+* qiGetTam: calcula o tamanho total da fila.
+
 
 ## Compilação
 
