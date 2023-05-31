@@ -3,6 +3,7 @@
 #include<string.h>
 #include"lista_encadeada.h"
 #include"pilha.h"
+#include"fila.h"
 
 void leiTest(){
     /*Criação de uma nova lista:*/
@@ -54,11 +55,28 @@ void siTest(){
 
 }
 
+void qiTest(){
+    queue_int* fila = qiStart();
+    qiEnqueue(fila, 10);
+    qiEnqueue(fila, 25);
+    qiEnqueue(fila, 33);
+    qiEnqueue(fila, 47);
+
+    printf("Dequeue:  %d\n", qiDequeue(fila));
+    printf("Dequeue:  %d\n", qiDequeue(fila));
+    printf("Dequeue:  %d\n", qiDequeue(fila));
+
+    qiDestruct(fila);
+
+    printf("Fim do qiTest\n");
+}
+
 
 int main(int argc, char const *argv[])
 {   
-    leiTest();
-    siTest();
+    //leiTest();
+    //siTest();
+    qiTest();
 
     printf("\n\n\n");
     return 0;

@@ -20,7 +20,7 @@ typedef struct node_stack_int node_stack_int;
 
 struct stack_int{
     int tam;
-    node_stack_int* head;
+    node_stack_int* top;
 };
 typedef struct stack_int stack_int;
 

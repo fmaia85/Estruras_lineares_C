@@ -4,7 +4,7 @@
 stack_int* siStart(){
     stack_int* ns = (stack_int*)malloc(sizeof(stack_int));
     ns->tam = 0;
-    ns->head = 0;
+    ns->top = 0;
     return ns;
 }
 
@@ -16,18 +16,18 @@ void siDestruct(stack_int* pilha){
 }
 
 void siPush(stack_int* pilha, int valor){
-    node_stack_int* nn = (node_stack_int*)malloc(sizeof(node_stack_int*));
+    node_stack_int* nn = (node_stack_int*)malloc(sizeof(node_stack_int));
     nn->valor = valor;
-    nn->prox = pilha->head;
-    pilha->head = nn;
+    nn->prox = pilha->top;
+    pilha->top = nn;
     pilha->tam+=1;
 }
 
 int siPop(stack_int* pilha){
     int v = 0;
     if(pilha->tam > 0){
-      struct node_stack_int* en = pilha->head;
-      pilha->head = en->prox;
+      node_stack_int* en = pilha->top;
+      pilha->top = en->prox;
       pilha->tam-=1;
       v = en->valor;
       free(en);
